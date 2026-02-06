@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-brand-dark text-brand-peach min-h-screen font-sans selection:bg-brand-teal selection:text-white;
+  }
+}
+
+/* Glassmorphism utilities */
+.glass-panel {
+  @apply bg-brand-teal/10 backdrop-blur-md border border-brand-teal/20 shadow-xl;
+}
+
+.glass-input {
+  @apply bg-brand-dark/50 border border-brand-teal/30 focus:border-brand-peach/50 focus:ring-1 focus:ring-brand-peach/50 transition-all duration-300;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-brand-dark;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-brand-teal/30 rounded-full hover:bg-brand-teal/50 transition-colors;
+}
